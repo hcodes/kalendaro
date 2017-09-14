@@ -1,0 +1,72 @@
+.kalendaro__day {
+    cursor: pointer;
+    empty-cells: hide;
+    vertical-align: middle;
+
+    &:hover {
+        background: #EBEBEB;
+        border-radius: 5px;
+    }
+
+    &_holiday {
+        color: #C11924;
+    }
+
+    &_last {
+        color: #999;
+    }
+
+    &_weekday,
+    &_holiday,
+    &_empty {
+        width: 15px;
+        height: 15px;
+        padding: 5px;
+        text-align: right;
+    }
+
+    &_marked {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAIAAADtkjPUAAAABnRSTlMA/wD/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANklEQVR42mP8//8/A17AxEAIEFbBgmA2OqJL1u9HNaN+PxG21O/HVIfNHaiKyPYLkjGMBEMMAEUCDkX6f0mTAAAAAElFTkSuQmCC') !important;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    &_now {
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 3px;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &_disabled,
+    &_disabled:hover {
+        cursor: default;
+        color: rgba(0, 0, 0, .2);
+        background: none;
+    }
+
+    &_gray-period,
+    &_gray-period:hover {
+        color: #aaa;
+    }
+
+    &_empty {
+        cursor: default;
+    }
+
+    &_empty,
+    &_empty:hover {
+        cursor: default;
+        background: none;
+        border-radius: 0;
+    }
+}

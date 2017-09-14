@@ -1,0 +1,32 @@
+.kalendaro__selector-week {
+    &, &-cap {
+        padding: 0;
+        background-color: #ccc;
+        display: inline-block;
+        width: 2px;
+        height: 16px;
+    }
+
+    &-cap {
+        border-bottom: 0;
+    }
+
+    th.&-cap,
+    td.& {
+        padding: 2px 5px 0;
+        text-align: center;
+    }
+
+    &-cap-i {
+        visibility: hidden;
+    }
+
+    &_disabled {
+        cursor: default !important;
+        background-color: #fff !important;
+
+        &-i {
+            background-color: #f0f0f0;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.kalendaro {
+    &__close,
+    &__maxmin,
+    &__resizer {
+        background-image: url('buttons.svg');
+        background-repeat: no-repeat;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__close,
+    &__maxmin {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 10px;
+        right: 0;
+        cursor: pointer;
+        background-position: 0 0;
+    }
+
+    &__maxmin {
+        background-position: -14px 0;
+        right: 20px;
+    }
+
+    &__resizer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 0;
+        line-height: 0;
+        width: 14px;
+        height: 14px;
+        cursor: se-resize;
+        z-index: 7;
+        display: block;
+        background-position: -42px 0;
+    }
+}

@@ -1,0 +1,50 @@
+.kalendaro__month {
+    border: 0;
+    font-weight: bold;
+    padding: 14px 0 10px 12px;
+    text-transform: uppercase;
+    vertical-align: top;
+
+    &:not(.kalendaro_selector-month_disabled):hover {
+        color: rgba(0, 0, 0, .7);
+        cursor: pointer;
+    }
+
+    &-table {
+        width: auto;
+    }
+
+    &_partially-selected .kalendaro__day_selected,
+    &_selected .kalendaro__day_weekday,
+    &_selected .kalendaro__day_holiday {
+        background: #FFEBA0;
+        border-radius: 0;
+    }
+
+    &_partially-selected .kalendaro__day_selected:hover,
+    &_selected .kalendaro__day:hover {
+        background-color: #FFF5D0;
+    }
+
+    &_partially-selected .kalendaro__day_selected-start {
+        border-radius: 5px 0 0 0;
+    }
+
+    &_partially-selected .kalendaro__day_selected-end {
+        border-radius: 0 0 5px 0;
+    }
+
+    &_num_11:not(:last-child) {
+        position: relative;
+    }
+
+    &_num_11:not(:last-child):after {
+        content: '';
+        display: block;
+        border-right: 2px solid rgba(0, 0, 0, .1);
+        position: absolute;
+        top: -16px;
+        bottom: 0;
+        right: 0;
+    }
+}
